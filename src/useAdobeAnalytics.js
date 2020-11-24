@@ -61,8 +61,7 @@ let useAdobeAnalytics = (digitalDataOrOptions) => {
 
   return {
     track: initialized ? track : trackNotReady,
-    // track: trackNotReady,
-    initialized
+     initialized
   };
 };
 
@@ -71,9 +70,7 @@ const _initScript = () => {
 
   return new Promise((resolve, reject) => {
     const script = document.createElement("script");
-    script.src = `https://assets.adobedtm.com/027a4b956dfde71f578f2758fd64745bb956cb47/satelliteLib-3553430d7b7afdf815f5e347a69e8c58976c3ca2${
-      isStaging ? "-staging" : ""
-    }.js`;
+    script.src = `https://assets.adobedtm.com/027a4b956dfde71f578f2758fd64745bb956cb47/satelliteLib-3553430d7b7afdf815f5e347a69e8c58976c3ca2.js`;
     script.addEventListener("load", () => {
       satelliteScriptLoaded = true;
       resolve();

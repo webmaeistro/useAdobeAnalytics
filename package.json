@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Queueing adobe analytics",
   "keywords": [],
+  "license": "MIT",
   "main": "src/index.js",
   "dependencies": {
     "react": "17.0.1",
