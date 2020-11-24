@@ -8,16 +8,17 @@ export default function App() {
     track({
       page: {
         pageInfo: {
-          pageName: [],
-          primaryCategory: [],
-          subCategory: []
+          pageName: {},
+          sectionName: {},
+          primaryCategory: {},
+          subCategory: {}
         },
       user: [
         {
           profile: [
             {
               profileInfo: {
-                profileID: [],
+                profileID: {},
                 },
               }
           ]
@@ -25,7 +26,7 @@ export default function App() {
       ],
     }
     });
-  }, []);
+  }, [track]);
 
   return <div className="App"></div>;
 }

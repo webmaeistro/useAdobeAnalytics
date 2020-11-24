@@ -11,13 +11,13 @@ let satelliteScriptPromise, satelliteScriptLoaded;
 //   };
 // };
 
-let useAdobeAnalytics = (digitalDataOrOptions) => {
+let useAdobeAnalytics = (_digitalDataOrOptions) => {
   let [initialized, setInitialized] = useState(false);
   let [queuedFns, setQueuedFns] = useState([]);
 
   let callQueuedFns = () => {
-    console.log("should fire queued fns");
-    console.log("queued", queuedFns);
+ //  console.log("should fire queued fns");
+   // console.log("queued", queuedFns);
     queuedFns.forEach((f) => {
       if (typeof f.fn === "function") {
         console.log("f.args", f.args);
@@ -31,7 +31,7 @@ let useAdobeAnalytics = (digitalDataOrOptions) => {
   };
 
   var trackNotReady = function (...args) {
-    console.log("track not ready");
+   // console.err("track not ready");
     setQueuedFns([
       ...queuedFns,
       {
